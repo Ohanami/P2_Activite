@@ -27,7 +27,7 @@ Public Class ClassName
 
 #Region "my Events"
 
-	<Category(""), Description("Evénement levé .")>
+	<Category(""), Description("EvÃ©nement levÃ© .")>
 	Public Shared Event OnMyEventEvent As EventHandler
 
 #End Region
@@ -36,7 +36,7 @@ Public Class ClassName
 
 #Region "Property"
 
-	<Category(""), Description("Obtient ou définit .")>
+	<Category(""), Description("Obtient ou dÃ©finit .")>
 	Public Property Exemple() As String
 		Get
 			Return _exemple
@@ -104,19 +104,9 @@ Public Class ClassName
 		  
     End Sub
 
-#End Region
-
-End Class
-
-'------------- Dans le fichier AssemblyInfo.vb
-
-' Déclare si l'assembly est conforme CLS (Common Language Specification).
-<Assembly: CLSCompliant(False)>
-
-
-'------------- Exemple d'entrée dans un handler
+'------------- Exemple d'entrÃ©e dans un handler
 	''' <summary>
-	''' Handler de l'événement <see cref=""/> ...
+	''' Handler de l'Ã©vÃ©nement <see cref=""/> ...
 	''' </summary>
 	''' <param name="sender">An <see cref="System.String"/> that contains the changed property name.</param>
 	''' <param name="e">An <see cref="MyCurrentEventArgs"/> that contains the event data.</param>
@@ -135,9 +125,13 @@ End Class
 				Case ""
 
 				Case Else
-					Throw New ArgumentOutOfRangeException("sender", sender, "Condition non référencée.")
+					Throw New ArgumentOutOfRangeException("sender", sender, "Condition non rï¿½fï¿½rencï¿½e.")
 
 			End Select
 		End If
 
 	End Sub
+
+#End Region
+
+End Class
