@@ -1,0 +1,143 @@
+<Category(""), Description("")>
+Public Class ClassName
+
+#Region "Fields"
+
+    'Constants
+
+    'Property
+	Private _exemple As String
+
+    'Gobal Variables
+
+
+#End Region
+
+#Region "Constructor"
+
+    Public Sub New()
+        InitializeComponent()
+        Me.Init()
+
+    End Sub
+
+#End Region
+
+#Region "Events"
+
+#Region "my Events"
+
+	<Category(""), Description("Evénement levé .")>
+	Public Shared Event OnMyEventEvent As EventHandler
+
+#End Region
+
+#End Region
+
+#Region "Property"
+
+	<Category(""), Description("Obtient ou définit .")>
+	Public Property Exemple() As String
+		Get
+			Return _exemple
+		End Get
+		Set( value As String)
+			_exemple = value
+			Me.OnEndExemple
+		End Set
+	End Property
+
+#End Region
+
+#Region "Function"
+
+#Region "Initialization"
+
+    ''' <summary>
+    ''' Initialize Control ...
+    ''' </summary>
+    Private Sub Init()
+        Me.InitVariable()
+        Me.InitResource()
+        Me.InitObject()
+        Me.InitEvent()
+
+    End Sub
+
+    ''' <summary>
+    ''' Initialize the control variables ...
+    ''' </summary>
+    Private Sub InitVariable()
+        'Property
+
+        'Gobal Variables
+
+    End Sub
+
+    ''' <summary>
+    ''' Initialize control resources ...
+    ''' </summary>
+    Private Sub InitResource()
+
+    End Sub
+
+    ''' <summary>
+    ''' Initializes the control objects ...
+    ''' </summary>
+    Private Sub InitObject()
+
+    End Sub
+
+    ''' <summary>
+    ''' Initializes the control events ...
+    ''' </summary>
+    Private Sub InitEvent()
+
+    End Sub
+
+#End Region
+
+	''' <summary>
+    ''' Actions post-modification de <see cref="Exemple"/> ...
+    ''' </summary>
+	Private sub OnEndExemple
+		  
+    End Sub
+
+#End Region
+
+End Class
+
+'------------- Dans le fichier AssemblyInfo.vb
+
+' Déclare si l'assembly est conforme CLS (Common Language Specification).
+<Assembly: CLSCompliant(False)>
+
+
+'------------- Exemple d'entrée dans un handler
+	''' <summary>
+	''' Handler de l'événement <see cref=""/> ...
+	''' </summary>
+	''' <param name="sender">An <see cref="System.String"/> that contains the changed property name.</param>
+	''' <param name="e">An <see cref="MyCurrentEventArgs"/> that contains the event data.</param>
+	Friend Sub UpdatePedalModel(sender As Object, e As MyCurrentEventArgs)
+		Dim strSender = TryCast(sender, String)
+		If String.IsNullOrWhiteSpace(strSender)
+			Throw New ArgumentNullException("sender")
+
+		ElseIf e Is Nothing
+			Throw New ArgumentNullException("e")
+
+		Else
+			Select Case strSender
+				Case ""
+
+				Case ""
+
+				Case Else
+					Throw New ArgumentOutOfRangeException("sender", sender, "Condition non référencée.")
+
+			End Select
+		End If
+
+	End Sub
